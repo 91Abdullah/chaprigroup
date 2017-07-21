@@ -11,19 +11,19 @@
                     <ul class="col-sm-4 footer__links">
 
                         <li class="footer__links-item">
-                            <a href="#" class="footer__link" title="About us">About us</a>
+                            <a href="{{ route('about-us') }}" class="footer__link" title="About us">About us</a>
                         </li>
                     </ul>
                     <ul class="col-sm-4 footer__links">
 
                         <li class="footer__links-item">
-                            <a href="#" class="footer__link" title="Brands">Brands</a>
+                            <a href="{{ route('brands') }}" class="footer__link" title="Brands">Brands</a>
                         </li>
                     </ul>
                     <ul class="col-sm-4 footer__links">
 
                         <li class="footer__links-item">
-                            <a href="#" class="footer__link" title="Career">Career</a>
+                            <a href="{{ route('career') }}" class="footer__link" title="Career">Career</a>
                         </li>
                     </ul>
 
