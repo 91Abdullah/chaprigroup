@@ -28,24 +28,24 @@ Route::group(['prefix' => 'divisions'], function () {
 });
 
 
-Route::group(['prefix' => 'admin'], function () {
-    Route::get('/', 'Admin\IndexController@index');
-    Route::group(['prefix' => 'article'], function () {
-        Route::get('/', 'Admin\ArticleController@index');
-        Route::get('/create', 'Admin\ArticleController@create');
-        Route::post('/create', 'Admin\ArticleController@create');
-    });
-    Route::group(['prefix' => 'page'], function () {
-        Route::get('/', 'Admin\PageController@index');
-        Route::get('/create', 'Admin\PageController@create');
-        Route::post('/create', 'Admin\PageController@create');
-        Route::get('/update', 'Admin\PageController@update');
-        Route::put('/update', 'Admin\PageController@update');
-    });
-    Route::group(['prefix' => 'block'], function () {
-        Route::get('/', 'Admin\BlockController@index');
-        Route::get('/create', 'Admin\BlockController@create');
-        Route::post('/create', 'Admin\BlockController@create');
-        Route::post('/upload', 'Admin\BlockController@upload');
-    });
-});
+// Route::group(['prefix' => 'admin'], function () {
+//     Route::get('/', 'Admin\IndexController@index');
+//     Route::group(['prefix' => 'article'], function () {
+//         Route::get('/', 'Admin\ArticleController@index');
+//         Route::get('/create', 'Admin\ArticleController@create');
+//         Route::post('/create', 'Admin\ArticleController@create');
+//     });
+//     Route::group(['prefix' => 'page'], function () {
+//         Route::get('/', 'Admin\PageController@index');
+//         Route::get('/create', 'Admin\PageController@create');
+//         Route::post('/create', 'Admin\PageController@create');
+//         Route::get('/update', 'Admin\PageController@update');
+//         Route::put('/update', 'Admin\PageController@update');
+//     });
+//     Route::group(['prefix' => 'block'], function () {
+//         Route::get('/', 'Admin\BlockController@index');
+//         Route::get('/create', 'Admin\BlockController@create');
+//         Route::post('/create', 'Admin\BlockController@create');
+//         Route::post('/upload', 'Admin\BlockController@upload');
+//     });
+// });
