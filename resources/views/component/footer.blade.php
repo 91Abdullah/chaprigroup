@@ -49,7 +49,7 @@
             </li>
 
             <li class="col-xs-4 footer__share-item">
-                <a href="{{ route('contact') }}" class="footer__share-link">
+                <a href="{{ route('contact-us') }}" class="footer__share-link">
                     <svg width="47" height="47" class="footer__share-image">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-contact"></use>
                     </svg>
