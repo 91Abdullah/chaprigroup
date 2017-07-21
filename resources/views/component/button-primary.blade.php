@@ -1,0 +1,1 @@
+<a href="{{ $link }}" target="_blank" class="button button--cta">{{ $text }}</a>
