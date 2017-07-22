@@ -5169,6 +5169,12 @@ span.colour-magenta {
         background-size: 90%;
         background-position: center 40px
     }
+
+    .generic__module--with-image .generic__module-content-container {
+        padding: 0;
+        background-size: 90%;
+        background-position: center 40px
+    }
 }
 
 .generic__module--innovation .generic_module-content-right {
