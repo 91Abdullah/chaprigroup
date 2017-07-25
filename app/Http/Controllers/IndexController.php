@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\ModuleRotate;
 use App\Teaser;
 use Route;
+use App\Division;
 
 class IndexController extends Controller
 {
@@ -26,7 +27,8 @@ class IndexController extends Controller
                 return view('page.about-us');
                 break;
             case 'divisions':
-                return view('page.divisions');
+                $brands = Division::all();
+                return view('page.divisions', compact('brands'));
                 break;
             case 'brands':
                 return view('page.brands');
@@ -39,13 +41,16 @@ class IndexController extends Controller
                 return view('page.contact-us');
                 break;
             case 'production':
-                return view('page.production');
+                $division = Division::where('name', 'Manufacture')->first();
+                return view('page.production', compact('division'));
                 break;
             case 'construction':
-                return view('page.construction');
+                $division = Division::where('name', 'Construction')->first();
+                return view('page.construction', compact('division'));
                 break;
             case 'trade':
-                return view('page.trade');
+                $division = Division::where('name', 'Trade')->first();
+                return view('page.trade', compact('division'));
                 break;
             default:
                 App::abort(404);
