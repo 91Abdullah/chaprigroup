@@ -19,9 +19,9 @@
 
         @slot('imgUrl')
             @mobile
-                {{ Image::url(url('storage/uploads/brands_landing.jpg'), 360, 470, ['crop' => true]) }}
+                {{ Image::url(url('storage/uploads/division_top.jpg'), 360, 470, ['crop' => true]) }}
             @elsemobile
-                {{ Image::url(url('storage/uploads/brands_landing.jpg'), 1349, 749,['crop' => true]) }}
+                {{ Image::url(url('storage/uploads/division_top.jpg'), 1349, 749,['crop' => true]) }}
             @endmobile
         @endslot
 

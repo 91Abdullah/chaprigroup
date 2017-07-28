@@ -29,9 +29,9 @@
                     @slot('image')
                         @if(!is_null($module->image))
                             @mobile
-                                {{ Image::url(url($module->image), 360, 940, ['gamma' => 0.1, 'crop']) }}
+                                {{ Image::url(url($module->image), 360, 940, ['crop']) }}
                             @elsemobile
-                                {{ Image::url(url($module->image), 768, 432, ['gamma' => 0.1, 'crop']) }}
+                                {{ Image::url(url($module->image), 1440, 1000, ['crop']) }}
                             @endmobile
                         @else
                             {{ $module->image }}

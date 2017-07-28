@@ -62,7 +62,7 @@
                     <svg width="47" height="47" class="footer__share-image">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-followrb"></use>
                     </svg>
-                    Follow RB
+                    Follow ChapriGroup
                 </a>
             </li>
         </ul>
