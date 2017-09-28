@@ -13,10 +13,6 @@
     <div class="item">
       <img src="{{ url('storage/uploads/index-slider/2.jpg') }}">
     </div>
-
-    <div class="item">
-      <img style="height: 759px;" src="{{ url('storage/uploads/index-slider/5.jpg') }}">
-    </div>
     
   </div>
 

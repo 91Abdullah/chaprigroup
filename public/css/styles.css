@@ -4092,7 +4092,9 @@ span.colour-magenta {
 }
 
 .brands-carousel__arrow--prev {
-    left: 0
+    left: 0;
+    z-index: 99;
+    color: #fff;
 }
 
 @media (min-width:992px) {
@@ -4102,7 +4104,8 @@ span.colour-magenta {
 }
 
 .brands-carousel__arrow--next {
-    right: 0
+    right: 0;
+    color: #fff;
 }
 
 @media (min-width:992px) {
