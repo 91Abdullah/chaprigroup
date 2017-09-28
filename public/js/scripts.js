@@ -1190,7 +1190,7 @@ window.matchMedia || (window.matchMedia = function() {
     function(a) {
         a(".js-brands-carousel").slick({
             dots: !1,
-            slidesToShow: 3,
+            slidesToShow: 1,
             prevArrow: '<button class="brands-carousel__arrow brands-carousel__arrow--prev"><svg width="13" height="13" ><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-chevron-left"></use></svg></button>',
             nextArrow: '<button class="brands-carousel__arrow brands-carousel__arrow--next"><svg width="13" height="13" ><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-chevron-right"></use></svg></button>',
             centerMode: !0,

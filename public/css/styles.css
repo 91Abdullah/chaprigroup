@@ -1028,8 +1028,7 @@ body>svg {
     content: 'â†'
 }
 
-.main-nav-search__container p,
-.slick-slider {
+.main-nav-search__container p {
     margin-bottom: 30px
 }
 
@@ -4113,7 +4112,7 @@ span.colour-magenta {
 }
 
 .brands-carousel__item {
-    height: 290px;
+    height: 400px;
     position: relative;
     opacity: .3;
     transition: opacity .35s
@@ -4121,19 +4120,19 @@ span.colour-magenta {
 
 @media (max-width:992px) {
     .brands-carousel__item {
-        height: 300px
+        height: 400px
     }
 }
 
 @media (max-width:768px) {
     .brands-carousel__item {
-        height: 170px
+        height: 400px
     }
 }
 
 @media (max-width:480px) {
     .brands-carousel__item {
-        height: 150px
+        height: 400px
     }
 }
 
@@ -4159,6 +4158,7 @@ span.colour-magenta {
 }
 
 .brands-carousel__link-text {
+    top: 20px;
     padding-bottom: 1px;
     border-bottom: solid 1px transparent;
     opacity: 0;
@@ -4166,14 +4166,14 @@ span.colour-magenta {
 }
 
 .brands-carousel__image {
-    width: 80px;
+    width: 300px;
     max-width: none;
     margin-bottom: 15px
 }
 
 @media (min-width:800px) {
     .brands-carousel__image {
-        width: 140px
+        width: 300px;
     }
 }
 
@@ -4482,7 +4482,7 @@ span.colour-magenta {
     right: 0;
     bottom: 0;
     left: 0;
-    background: #fff;
+    background: #ccc;
     z-index: 101
 }
 
@@ -4621,15 +4621,15 @@ span.colour-magenta {
 
 .overlay-carousel__image {
     display: block;
-    width: 198px;
-    height: 198px;
+    width: auto;
+    height: auto;
     margin: 0 auto 20px
 }
 
 @media (min-width:768px) {
     .overlay-carousel__image {
-        width: 464px;
-        height: 464px
+        width: auto;
+        height: auto;
     }
 }
 
@@ -6305,4 +6305,38 @@ button.global-locations__button {
 
 .social_feed .twitter-container {
     border: 1px solid #e9ebee
+}  
+  
+/* CUSTOM USER OPTIONS */
+
+.carousel-container {
+    width: 100%;
+    /* margin-top: 50px; */
+}
+
+.item {
+    margin: 0;
+    border-right: 1px solid #333;
+    background: #333;
+    color: #f0f0f0;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.item img {
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    #slider-carousel .brands-carousel__arrow--prev {
+        left: 0;
+        color: #fff;
+        z-index: 1000;    
+    }
+
+    #slider-carousel .brands-carousel__arrow--next {
+        right: 0;
+        color: #fff;
+        z-index: 1000;    
+    }
 }

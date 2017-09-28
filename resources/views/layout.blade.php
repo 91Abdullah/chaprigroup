@@ -105,6 +105,7 @@
             $('body').prepend($svg);
         }
     </script>
+    @yield('overlay-scripts')
     <script src="{{ asset('js/scripts.js') }}"></script>
     @yield('scripts')
 </body>

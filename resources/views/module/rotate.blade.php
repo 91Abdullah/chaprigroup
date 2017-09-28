@@ -20,13 +20,15 @@
             </div>
 
 
-            <div class="generic__module-content-container restrict">
+            <div class="generic__module-content-container {{ $extra_content == '' ? 'restrict' : '' }}">
                 <div class="generic__module-intro-copy">
                     {{ $intro_copy }}
                 </div>
                 <h2 class="generic__module-title">
                     {{ $title }}
                 </h2>
+
+                {{ $extra_content }}
                     
                 <a href="{{ $link }}" target="" class="generic__module-text-link">
                     {{ $text_link }}
