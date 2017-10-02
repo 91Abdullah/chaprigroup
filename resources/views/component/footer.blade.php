@@ -31,9 +31,11 @@
             </div>
 
 
-        {{--  <div class="footer__content">
-            <p><span>Chapri Group  |  Registered office at 103 - 105 Bath Road, Slough, Berkshire, SL1 3UH  |  Registered in England &amp; Wales, No 6270876</span></p>
-        </div>  --}}
+        <div class="footer__content">
+            <p><span>Chapri Group  |  Registered office at Suite No. 220, Hussain Trade Center, Altaf Hussain Road, New Chali, Karachi  |  Registered in Pakistan</span></p>
+            <br />
+            <p><span>Kashif Attari - Sales Manager <b>00923212393822</b> | Rameez Majeed - Sales Representative <b>00923018282137</b> | Head Office - <b>00922134525702-03</b></span></p>
+        </div>
 
     </div>
 

@@ -38,6 +38,12 @@
                 <label for="email" class="control-label">E-Mail Address</label>
                 {!! Form::email('email', null, ['class' => 'form-control']) !!}
             </div>
+
+            <div class="form-group">
+                <label for="phone" class="control-label">Mobile Number</label>
+                {!! Form::email('phone', null, ['class' => 'form-control']) !!}
+            </div>
+
             <div class="form-group">
                 <label for="message" class="control-label">Message</label>
                 {!! Form::textarea('message', null, ['class' => 'form-control']) !!}

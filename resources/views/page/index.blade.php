@@ -24,217 +24,148 @@
         <div class="rotate__modules-wrapper">
 
             @foreach($rotateModules as $key => $module)
+
+                @if($module->name == 'about_us')
+
+                    @component('module.simple')
+
+                        @slot('image')
+                            @if(!is_null($module->image))
+                                @mobile
+                                    {{ Image::url(url($module->image), 360, 940, ['crop']) }}
+                                @elsemobile
+                                    {{ Image::url(url($module->image), 1440, 1000, ['crop']) }}
+                                @endmobile
+                            @else
+                                {{ $module->image }}
+                            @endif
+                        @endslot
+
+                        @slot('class')
+                            {{ $module->class }}
+                        @endslot
+
+                        @slot('z_index') 
+
+                            {{ count($rotateModules) - $key }}
+
+                        @endslot
+
+                        @slot('color')
+
+                            {{ $module->color }}
+
+                        @endslot
+
+                        @slot('text_button')
+
+                            {{ $module->text_button }}
+
+                        @endslot
+
+                        @slot('intro_copy')
+
+                            {!! $module->intro_copy !!}
+
+                        @endslot
+
+                        @slot('title')
+
+                            {{ $module->title }}
+
+                        @endslot
+
+                        @slot('extra_content')
+                            {{ null }}
+
+                        @endslot    
+
+                        @slot('link')
+                            {{ $module->link }}
+                        @endslot
+
+                        @slot('text_link')
+
+                            {{ $module->text_link }}
+
+                        @endslot
+
+                    @endcomponent
+
+                @else
                 
-                @component('module.rotate')
+                    @component('module.rotate')
 
-                    @slot('image')
-                        @if(!is_null($module->image))
-                            @mobile
-                                {{ Image::url(url($module->image), 360, 940, ['crop']) }}
-                            @elsemobile
-                                {{ Image::url(url($module->image), 1440, 1000, ['crop']) }}
-                            @endmobile
-                        @else
-                            {{ $module->image }}
-                        @endif
-                    @endslot
+                        @slot('image')
+                            @if(!is_null($module->image))
+                                @mobile
+                                    {{ Image::url(url($module->image), 360, 940, ['crop']) }}
+                                @elsemobile
+                                    {{ Image::url(url($module->image), 1440, 1000, ['crop']) }}
+                                @endmobile
+                            @else
+                                {{ $module->image }}
+                            @endif
+                        @endslot
 
-                    @slot('class')
-                        {{ $module->class }}
-                    @endslot
+                        @slot('class')
+                            {{ $module->class }}
+                        @endslot
 
-                    @slot('z_index') 
+                        @slot('z_index') 
 
-                        {{ count($rotateModules) - $key }}
+                            {{ count($rotateModules) - $key }}
 
-                    @endslot
+                        @endslot
 
-                    @slot('color')
+                        @slot('color')
 
-                        {{ $module->color }}
+                            {{ $module->color }}
 
-                    @endslot
+                        @endslot
 
-                    @slot('text_button')
+                        @slot('text_button')
 
-                        {{ $module->text_button }}
+                            {{ $module->text_button }}
 
-                    @endslot
+                        @endslot
 
-                    @slot('intro_copy')
+                        @slot('intro_copy')
 
-                        {!! $module->intro_copy !!}
+                            {!! $module->intro_copy !!}
 
-                    @endslot
+                        @endslot
 
-                    @slot('title')
+                        @slot('title')
 
-                        {{ $module->title }}
+                            {{ $module->title }}
 
-                    @endslot
+                        @endslot
 
-                    @slot('extra_content')
-                        @if($module->name == 'product_and_brands')
-                            <div class="js-brands-carousel brands-carousel">
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="0">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product1.png'), 300, 300, ['crop' => true]) }}" alt="Chana Atti" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Chana Atti</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="1">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product2.png'), 300, 300, ['crop' => true]) }}" alt="Dettol" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Chana Chilka</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="2">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product3.png'), 300, 300, ['crop' => true]) }}" alt="Lysol" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Daily Feed</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="3">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product4.png'), 300, 300, ['crop' => true]) }}" alt="Durex" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Dates Chora</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="4">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product5.png'), 300, 300, ['crop' => true]) }}" alt="Harpic" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Khushal Mix Atti</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="5">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product6.png'), 300, 300, ['crop' => true]) }}" alt="Air Wick" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Makai Dalya</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="6">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product7.png'), 300, 300, ['crop' => true]) }}" alt="Cillit Bang" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Masoor Atti</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="7">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product8.png'), 300, 300, ['crop' => true]) }}" alt="Mucinex" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Masoor Qutta</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="8">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product9.png'), 300, 300, ['crop' => true]) }}" alt="Mortein" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Milk Booster</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="9">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product10.png'), 300, 300, ['crop' => true]) }}" alt="Nurofen" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Milk Booster Feed</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="10">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product11.png'), 300, 300, ['crop' => true]) }}" alt="Scholl" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Milkona Mix Atti</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="11">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product12.png'), 300, 300, ['crop' => true]) }}" alt="Strepsils" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Mix Atti</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="12">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product13.png'), 300, 300, ['crop' => true]) }}" alt="Vanish" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Mix Qutta</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="13">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product14.png'), 300, 300, ['crop' => true]) }}" alt="Veet" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Moong Husk</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="14">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product15.png'), 300, 300, ['crop' => true]) }}" alt="Woolite" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Mong & Masoor Qutta</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="15">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product16.png'), 300, 300, ['crop' => true]) }}" alt="Clearasil" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Mong Qutta</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="16">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product17.png'), 300, 300, ['crop' => true]) }}" alt="Finish" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Palm Kernel Cake</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="17">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product18.png'), 300, 300, ['crop' => true]) }}" alt="Gaviscon" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Sarso Chora</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="18">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product19.png'), 300, 300, ['crop' => true]) }}" alt="Nutramigen" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Toor Atti</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="19">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product20.png'), 300, 300, ['crop' => true]) }}" alt="Calgon" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Toor Husk</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="20">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product21.png'), 300, 300, ['crop' => true]) }}" alt="Calgon" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Urad Atti</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="21">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product22.png'), 300, 300, ['crop' => true]) }}" alt="Calgon" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Urad Husk</span>
-                                    </a>
-                                </div>
-                                <div class="brands-carousel__item">
-                                    <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="22">
-                                        <img src="{{ Image::url(url('storage/uploads/products/product23.png'), 300, 300, ['crop' => true]) }}" alt="Calgon" class="brands-carousel__image" />
-                                        <span class="brands-carousel__link-text">Wheat Dalya</span>
-                                    </a>
-                                </div>
-                            </div>
-                            
+                        @slot('extra_content')
+                            @if($module->name == 'product_and_brands')
+                                @include('component.product')
+                                
 
-                        @else
-                            {{ null }}    
-                        @endif
+                            @else
+                                {{ null }}    
+                            @endif
 
-                    @endslot    
+                        @endslot    
 
-                    @slot('link')
-                        {{ $module->link }}
-                    @endslot
+                        @slot('link')
+                            {{ $module->link }}
+                        @endslot
 
-                    @slot('text_link')
+                        @slot('text_link')
 
-                        {{ $module->text_link }}
+                            {{ $module->text_link }}
 
-                    @endslot
+                        @endslot
 
-                @endcomponent
+                    @endcomponent
 
+                @endif
 
             @endforeach
             

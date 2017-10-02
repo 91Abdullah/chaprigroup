@@ -4176,7 +4176,7 @@ span.colour-magenta {
 
 @media (min-width:800px) {
     .brands-carousel__image {
-        width: 300px;
+        width: 500px;
     }
 }
 
@@ -6342,4 +6342,9 @@ button.global-locations__button {
         color: #fff;
         z-index: 1000;    
     }
+}
+
+.rotate__module-simple {
+    margin-top: 50px;
+    margin-bottom: 120px;
 }

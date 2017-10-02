@@ -61,7 +61,7 @@
 
             <div class="wrapper">
 
-                <h2 class="overlay__title">Follow RB</h2>
+                <h2 class="overlay__title">Follow Chapri Group</h2>
 
                 <div class="overlay__content">
                     
@@ -69,17 +69,17 @@
 
                 <div class="overlay__links">
 
-                        <a href="https://www.facebook.com/discoverRB" title="Facebook" target="_blank"  class="overlay__link-icon">
-                            <img data-icon-alias="facebook-square" class="brand-social__icon" alt="Facebook" />
+                        <a href="" title="Facebook" target="_blank"  class="overlay__link-icon">
+                            <img src="{{ url('storage/uploads/social/social-facebook-square.png') }}" alt="Facebook" />
                         </a>
-                        <a href="https://twitter.com/discoverRB" title="Twitter" target="_blank"  class="overlay__link-icon">
-                            <img data-icon-alias="twitter-square" class="brand-social__icon" alt="Twitter" />
+                        <a href="" title="Twitter" target="_blank"  class="overlay__link-icon">
+                            <img src="{{ url('storage/uploads/social/social-twitter-square.png') }}" alt="Twitter" />
                         </a>
-                        <a href="https://www.youtube.com/user/RBworldwide" title="YouTube" target="_blank"  class="overlay__link-icon">
-                            <img data-icon-alias="youtube-square" class="brand-social__icon" alt="YouTube" />
+                        <a href="" title="YouTube" target="_blank"  class="overlay__link-icon">
+                            <img src="{{ url('storage/uploads/social/social-youtube-square.png') }}" alt="YouTube" />
                         </a>
-                        <a href="https://www.linkedin.com/company/discoverrb" title="LinkedIn"  class="overlay__link-icon">
-                            <img data-icon-alias="linkedin" class="brand-social__icon" alt="LinkedIn" />
+                        <a href="" title="LinkedIn"  class="overlay__link-icon">
+                            <img src="{{ url('storage/uploads/social/social-linkedin.png') }}" alt="LinkedIn" />
                         </a>
                     
                 </div>
@@ -107,6 +107,11 @@
     </script>
     @yield('overlay-scripts')
     <script src="{{ asset('js/scripts.js') }}"></script>
+    <script>
+        $('.main-nav-mobile__close').on('click', function() { 
+            $('.main-nav-mobile').removeClass('is-ready');
+        });
+    </script>
     @yield('scripts')
 </body>
 </html>

@@ -1875,9 +1875,9 @@ window.matchMedia || (window.matchMedia = function() {
             })
         }();
         var Q = function() {
-                i.on("click.toggleNav", function(a) {
+                i.on("click", function(a) {
                     e.addClass(D).fadeIn(), a.preventDefault()
-                }), j.on("click.toggleMobileNav", function(b) {
+                }), j.on("click", function(b) {
                     e.fadeOut(function() {
                         a(this).removeClass(D).removeAttr("style")
                     }), o.hasClass(D) && P(this, function() {
