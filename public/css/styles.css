@@ -4115,7 +4115,7 @@ span.colour-magenta {
 }
 
 .brands-carousel__item {
-    height: 400px;
+    height: 600px;
     position: relative;
     opacity: .3;
     transition: opacity .35s
@@ -4123,13 +4123,13 @@ span.colour-magenta {
 
 @media (max-width:992px) {
     .brands-carousel__item {
-        height: 400px
+        height: 600px
     }
 }
 
 @media (max-width:768px) {
     .brands-carousel__item {
-        height: 400px
+        height: 600px
     }
 }
 
@@ -5446,8 +5446,21 @@ span.colour-magenta {
     max-width: 1350px
 }
 
+.rotate__module-simple .rotate__module-content {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    padding: 50px 10% 100px;
+    margin: 0 auto;
+    max-width: 1350px
+}
+
 @media (min-width:768px) and (max-width:1150px) {
     .rotate__module .rotate__module-content {
+        padding: 50px 15%
+    }
+
+    .rotate__module-simple .rotate__module-content {
         padding: 50px 15%
     }
 }
@@ -6344,7 +6357,19 @@ button.global-locations__button {
     }
 }
 
-.rotate__module-simple {
-    margin-top: 50px;
-    margin-bottom: 120px;
+@media (min-width: 992px) {
+    .rotate__module-simple {
+        /* margin-top: 50px; */
+        margin-bottom: 120px;
+    }
+}
+
+.media__picture__simple {
+    background: gray;
+    text-align: center;
+}
+
+.media__picture__simple img {
+    width: auto;
+    height: auto;
 }

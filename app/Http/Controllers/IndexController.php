@@ -7,6 +7,7 @@ use App\ModuleRotate;
 use App\Teaser;
 use Route;
 use App\Division;
+use App\Product;
 
 class IndexController extends Controller
 {
@@ -21,7 +22,9 @@ class IndexController extends Controller
         switch (Route::currentRouteName()) {
             case 'index':
                 $rotateModules = ModuleRotate::all();
-                return view('page.index', compact('rotateModules'));
+                $products = Product::where('active', true)->get()->sort();
+                // return $products;
+                return view('page.index', compact('rotateModules', 'products'));
                 break;
             case 'about-us':
                 return view('page.about-us');
@@ -31,7 +34,8 @@ class IndexController extends Controller
                 return view('page.divisions', compact('brands'));
                 break;
             case 'brands':
-                return view('page.brands');
+                $products = Product::where('active', true)->get()->sort();
+                return view('page.brands', compact('products'));
                 break;
             case 'career':
                 $teasers = Teaser::all();

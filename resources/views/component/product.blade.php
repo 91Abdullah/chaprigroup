@@ -1,4 +1,14 @@
-<div class="js-brands-carousel brands-carousel">
+
+
+<div class="brands-carousel__item">
+    <a href="#" title="{{ $title }}" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="{{ $index }}">
+        <img src="{{ Image::url(url('storage/uploads/' . $image), 500, 500, ['crop' => true]) }}" alt="{{ $title }}" class="brands-carousel__image" />
+        <span class="brands-carousel__link-text">{{ $title }}</span>
+    </a>
+</div>
+
+
+{{--  <div class="js-brands-carousel brands-carousel">
     <div class="brands-carousel__item">
         <a href="#" title="" class="brands-carousel__link  js-open-brand-overlay" data-brand-index="0">
             <img src="{{ Image::url(url('storage/uploads/products/product1.png'), 500, 500, ['crop' => true]) }}" alt="Chana Atti" class="brands-carousel__image" />
@@ -137,4 +147,4 @@
             <span class="brands-carousel__link-text">Wheat Dalya</span>
         </a>
     </div>
-</div>
+</div>  --}}
