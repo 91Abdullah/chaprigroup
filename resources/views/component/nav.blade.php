@@ -105,7 +105,7 @@
                     </script>
                     @endverbatim --}}
 
-                    <div class="col-xs-5 col-sm-3 col-sm-offset-9 main-nav-mobile__close-wrapper">
+                    <div class="col-xs-2 col-sm-2 main-nav-mobile__close-wrapper">
 
                         <a href="#" class="main-nav-mobile__close js-toggle-mobile-nav" title="Close menu">
                             <svg width="18" height="18" class="main-nav-mobile__close-image">

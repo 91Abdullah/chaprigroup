@@ -5398,7 +5398,8 @@ span.colour-magenta {
 
 .rotate__module.rotate__module--top,
 .rotate__module:first-child {
-    margin-top: -9%
+    /*margin-top: -9%*/
+    /*margin-top: 10%*/
 }
 
 @media (max-width:820px) {
@@ -6413,7 +6414,7 @@ button.global-locations__button {
     width: 100%;
     background-size: cover;
     position: relative;
-    background: #fff
+    background: transparent;
 }
 
 .rotate__module-simple .rotate__module-inner.rotate__module--bgcolor_green {
@@ -6485,18 +6486,6 @@ button.global-locations__button {
     color: #3f81b1
 }
 
-.rotate__module-simple.rotate__module--top,
-.rotate__module:first-child {
-    margin-top: -9%
-}
-
-@media (max-width:820px) {
-    .rotate__module-simple.rotate__module--top,
-    .rotate__module-simple:first-child {
-        margin-top: -13%
-    }
-}
-
 .rotate__module-simple.rotate__module--bottom,
 .rotate__module-simple:last-child {
     position: relative
@@ -6519,10 +6508,10 @@ button.global-locations__button {
     z-index: 2
 }
 
-.rotate__module-simple.rotate__module--bottom .rotate__module-content,
+/*.rotate__module-simple.rotate__module--bottom .rotate__module-content,
 .rotate__module-simple:last-child .rotate__module-content {
     padding-bottom: 100px!important
-}
+}*/
 
 .rotate__module-simple .rotate__module-content {
     width: 100%;

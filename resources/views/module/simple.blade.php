@@ -1,5 +1,5 @@
 <div class="rotate__module-simple {{ !($image == '') ? 'rotate__module-with-image' : '' }}" style="z-index: {{ $z_index }}">
-    <div class="rotate__module-inner {{ ($image == '') ? 'rotate__module--' . $color : '' }}">
+    <div class="rotate__module-inner">
         @if(!($image == ''))
             <picture class="rotate__module-background-image">
                 <img srcset="{!! $image !!}" alt="">
