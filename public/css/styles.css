@@ -4486,7 +4486,7 @@ span.colour-magenta {
     bottom: 0;
     left: 0;
     background: #ccc;
-    z-index: 101
+    z-index: 1001;
 }
 
 .overlay--dark {
