@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chapri Group - We create the best!</title>
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/styles.min.css') }}">
     @yield('styles')
 </head>
 <body role="document" itemscope itemtype="http://schema.org/WebPage" class="corehome sk-language-en sk-country-gb">
@@ -90,8 +90,8 @@
     </script>
 
 
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script async src="https://www.youtube.com/iframe_api"></script>
+    <script async src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="{{ asset(`js/jquery-1.10.2.min.js`) }}"><\/script>')
     </script>
@@ -106,7 +106,7 @@
         }
     </script>
     @yield('overlay-scripts')
-    <script src="{{ asset('js/scripts.js') }}"></script>
+    <script src="{{ asset('js/scripts.min.js') }}"></script>
     <script>
         $('.main-nav-mobile__close').on('click', function() { 
             $('.main-nav-mobile').removeClass('is-ready');
