@@ -90,8 +90,8 @@
     </script>
 
 
-    <script async src="https://www.youtube.com/iframe_api"></script>
-    <script async src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="{{ asset(`js/jquery-1.10.2.min.js`) }}"><\/script>')
     </script>
